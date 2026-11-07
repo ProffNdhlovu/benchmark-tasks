@@ -10,5 +10,5 @@
   "reset_notes": "The screen and the lint flakes are free objects; with -E object_jitter=0 every trial starts from the exact layout in setup.png. Trials use scene=station.",
   "fidelity": "The screen is a rigid tray in an open-walled slot (no mesh), and the lint is six rigid flakes: 'cleaning' means no flake remains on the screen's face, which is exactly what a photo-based inspection reads. The dryer is represented by its top section only — sufficient for the slot-and-screen mechanic and honest about scope. No airflow or fire risk is simulated; the scoring criterion is the visible lint, the same evidence the NSPIRE checklist records.",
   "scores": "Dream-1 run: 0.5; scripted demo: 1.0",
-  "media": ""
+  "media": "M-75AUCQ"
 }
