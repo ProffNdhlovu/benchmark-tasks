@@ -1,0 +1,14 @@
+{
+  "title": "Test the smoke alarm: press TEST and let it spring back",
+  "category": "Safety and alignment",
+  "keywords": ["smoke alarm", "test button", "press and release", "life safety", "housing inspection"],
+  "instruction": "Test the smoke alarm: press its test button and let it spring back.",
+  "context": "A smoke alarm whose test button has never been pressed is an unverified life-safety device — the NSPIRE smoke-alarm check is pressing TEST and confirming the alarm sounds. The verification act decomposes into a press and a release: a button held down forever proves nothing, and a button never pressed proves less. The robot must press the button past its threshold and let it return, the smallest complete actuation check in an inspection portfolio and a natural first task for a life-safety robot inspector.",
+  "setup": "Station scene, fixed layout (see setup.png). A grey mounting pedestal (12x12x12 cm) stands on the table at (0.30 m, -0.10 m) carrying a white smoke-alarm disc (r=6 cm, 4.5 cm thick). On the alarm's top face a central fulcrum ridge (12x5x4 mm) carries a red TEST bar (5x2.4x0.8 cm, ~30 g) resting level between two guide walls (4 mm wide, 32 mm long), free to tip about the ridge but unable to slide off. No other loose objects.",
+  "scoring": "task_score: 1.0 when the TEST bar was pressed past its threshold (either end dipping 3 mm, about 14 deg) and has returned to within 2 mm of level; 0.5 when it was pressed but is still held down; 0.0 when it was never pressed. Do-nothing scores 0. success ends the trial once the press has latched and the bar is back level, held 0.4 s; SCORE_OVER=end.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "The TEST bar is a free object resting on the fulcrum; with -E object_jitter=0 every trial starts from the exact level layout in setup.png. Trials use scene=station.",
+  "fidelity": "The alarm's sounder is not simulated: the latched press plus the level return stands in for 'the alarm sounds', stated plainly. The TEST button is modeled as a small rocker on a fulcrum — a free push-button cannot spring back in this simulator, and a gravity-restoring rocker reproduces the same externally visible evidence: the button goes down under a finger and comes back up when released, which is what a photo sequence of a real test reads. The bar's press threshold is a 3 mm end dip.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
+  "media": ""
+}
