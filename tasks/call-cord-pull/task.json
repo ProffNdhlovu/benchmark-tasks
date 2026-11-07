@@ -14,7 +14,7 @@
   "scoring": "task_score reads the rod's tilt about its pivot: the grip end's drop below its level height is 20 cm x sin(tilt). 0.5 at 7.5 cm of drop; 1.0 at 15 cm or more (48.6 deg of swing). The rod must still be riding its pivot: centre within 1.5 cm of the ridge and above pivot height minus 2 cm; a rod knocked off onto the table scores 0. success ends the trial when the full pull holds 0.4 s; SCORE_OVER=best keeps a pull that later swings back.",
   "run_limit": "2,400 steps (2 minutes at 20 Hz)",
   "reset_notes": "The rod is a free object resting on the ridge; with -E object_jitter=0 every trial starts from the exact level layout in setup.png. Trials use scene=station.",
-  "fidelity": "The hanging call cord is modeled as a light rigid rod balanced on a pivot ridge: a free object cannot hang from a fixed structure in this simulator, and a rigid rod on a pivot reproduces the same externally visible evidence — the pull end starts level with the bracket and ends 15 cm lower, which is what a photo-and-tape-measure inspection reads. The unit's cord, ceiling anchor and internal latching are simplified; pulling down is scored, not any signal being sent. The 15 …",
+  "fidelity": "The hanging call cord is modeled as a light rigid rod balanced on a pivot ridge: a free object cannot hang from a fixed structure in this simulator, and a rod on a pivot reproduces the same externally visible evidence - the pull end starts level with the bracket and ends 15 cm lower, which is what a photo-and-tape-measure inspection reads. Cord, ceiling anchor and internal latching are simplified; pulling down is scored, not any signal being sent.",
   "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
   "media": "M-3YMUXB"
 }
