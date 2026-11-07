@@ -10,5 +10,5 @@
   "reset_notes": "The bolt is a free object resting on the plate; with -E object_jitter=0 every trial starts from the exact locked layout in setup.png. Trials use scene=station.",
   "fidelity": "A real slide bolt rides a keeper channel and a strike bracket; here the bolt rests on a backplate between guide rails with a keeper stop, reproducing the externally visible evidence — a wide knob-end slide that starts thrown and ends seated 4-5 cm back, which is what a photo-and-tape-measure inspection reads. Latch internals, the strike plate and the door itself are not modeled; the slide is scored, not any latch engaging.",
   "scores": "Dream-1 run: 0.0; scripted demo: 1.0 (80 steps)",
-  "media": ""
+  "media": "M-74F2LA"
 }
