@@ -10,5 +10,5 @@
   "reset_notes": "The knobs are free objects on stems; with -E object_jitter=0 every trial starts from the exact layout in setup.png, knob 2 at exactly 90 deg. Trials use scene=station. The on knob's identity and offset are fixed (reproducible); the robot still has to find it by looking.",
   "fidelity": "No gas or flame is simulated: 'on' is the knob's angular position (a quarter-turn open) and 'off' its return to a closed orientation — the same thing a photo of the controls reads. The knob's yaw transfer from the wrist is friction-dependent, so the model must grip and turn deliberately rather than rely on one blind sweep. Knobs, stems and console are rigid boxes; the guide posts block the knob from sliding off while leaving rotation free.",
   "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
-  "media": ""
+  "media": "M-BZ33F9"
 }
