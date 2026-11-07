@@ -1,0 +1,14 @@
+{
+  "title": "Find the cooktop knob left on and turn it off",
+  "category": "Societal relevance",
+  "keywords": ["cooktop", "knob", "search and fix", "one wrong state", "housing inspection"],
+  "instruction": "One of the cooktop's burner knobs is turned on; find it and turn it off.",
+  "context": "A burner left on is a fire and burn hazard and a standing NSPIRE cooking-appliance deficiency: the inspector scans the controls, spots the knob that is not in its off position, and turns it off. The robot must find the one wrong knob with its cameras — no blind rotation fixes it, since a single fixed sweep leaves either the on knob mid-way or an off knob opened. This is the search-and-fix counterpart to the faucet checks: there the robot verifies a valve it is told about; here it must discover which of four identical controls is wrong.",
+  "setup": "Station scene, fixed layout (see setup.png). A dark cooktop slab (35x22.5x2 cm) lies on the table centred at (0.305 m, -0.0175 m) with four burner rings (r=4 cm) and a raised control console (35x6x6 cm) along its front edge. The console carries four square knobs (5x5x4 cm, 150 g, blue) on steel stems (r=1.4 cm, 3 cm) at x = 0.17, 0.26, 0.35, 0.44 m, y = 0.065 m, each riding on four small guide posts. Knob 2 (x = 0.26 m) starts a quarter-turn open (90 deg); the other three start closed. No other loose objects.",
+  "scoring": "task_score: 1.0 when every knob sits within 15 deg of a closed orientation (0/180 deg — a square knob is 180-deg symmetric); 0.5 when the on knob was shut but an off knob was left opened by collateral turning; 0.0 when the on knob is still open. Do-nothing scores 0. success ends the trial when all four knobs are closed and it holds 0.4 s; SCORE_OVER=end.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "The knobs are free objects on stems; with -E object_jitter=0 every trial starts from the exact layout in setup.png, knob 2 at exactly 90 deg. Trials use scene=station. The on knob's identity and offset are fixed (reproducible); the robot still has to find it by looking.",
+  "fidelity": "No gas or flame is simulated: 'on' is the knob's angular position (a quarter-turn open) and 'off' its return to a closed orientation — the same thing a photo of the controls reads. The knob's yaw transfer from the wrist is friction-dependent, so the model must grip and turn deliberately rather than rely on one blind sweep. Knobs, stems and console are rigid boxes; the guide posts block the knob from sliding off while leaving rotation free.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
+  "media": ""
+}
