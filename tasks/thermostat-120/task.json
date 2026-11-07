@@ -1,0 +1,14 @@
+{
+  "title": "Turn the water heater thermostat down to 120",
+  "category": "Societal relevance",
+  "keywords": ["thermostat", "water heater", "scald", "dial", "housing inspection"],
+  "instruction": "Turn the water heater thermostat down to 120 degrees.",
+  "context": "Water heaters set above 120 deg F scald — a leading in-home burn injury for children and older residents, and an NSPIRE inspection item. The fix is a dial turn, verified by reading the pointer against the dial's scale: numeric on the face, no tools.",
+  "setup": "Station scene, fixed layout (see setup.png). At (0.30, 0.065) a dark control box (14x10x8 cm) carries a white dial face (12x8.5x1 cm) on a grey stem (2.8 cm across, 3 cm tall). Four black posts (1.2 cm across, 4.2 cm tall) at +/-3.11 cm in x and y guide the dial. An orange dial knob (5x5x4 cm, 150 g) rides the stem, pointer set to the 140 mark (60 deg clockwise of the 120 mark). The dial's face scale is 1 deg of pointer per deg F. No other loose objects.",
+  "scoring": "task_score reads the dial's yaw about the stem: 1.0 when the pointer is within 7.5 deg of the 120 mark (the face's +/-5 deg F); 0.5 within 15 deg; else 0. The dial must stay on its stem (posts keep it from lifting; a dial knocked off is not a set thermostat). success ends the trial once the pointer holds inside the full tolerance. SCORE_OVER=end scores the final state.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "The dial is a free object riding the stem; with -E object_jitter=0 every trial starts from the exact 140-mark layout in setup.png. Trials use scene=station.",
+  "fidelity": "A water heater's thermostat is a dial behind a cover; here the dial rides an exposed stem with guide posts, reproducing the externally visible evidence — a pointer that starts at 140 and ends at 120 on a 1-deg-per-deg-F face, which is what the inspection reads. The water heater body, its burner and the actual water temperature are not modeled; turning the dial down is scored, not the tank cooling.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0 (296 steps)",
+  "media": ""
+}
