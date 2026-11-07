@@ -10,5 +10,5 @@
   "reset_notes": "The dial is a free object riding the stem; with -E object_jitter=0 every trial starts from the exact 140-mark layout in setup.png. Trials use scene=station.",
   "fidelity": "A water heater's thermostat is a dial behind a cover; here the dial rides an exposed stem with guide posts, reproducing the externally visible evidence — a pointer that starts at 140 and ends at 120 on a 1-deg-per-deg-F face, which is what the inspection reads. The water heater body, its burner and the actual water temperature are not modeled; turning the dial down is scored, not the tank cooling.",
   "scores": "Dream-1 run: 0.0; scripted demo: 1.0 (296 steps)",
-  "media": ""
+  "media": "M-HDKSVA"
 }
