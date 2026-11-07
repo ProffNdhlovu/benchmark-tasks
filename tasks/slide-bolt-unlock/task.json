@@ -1,0 +1,14 @@
+{
+  "title": "Unlock the exit door: slide the bolt back",
+  "category": "Societal relevance",
+  "keywords": ["slide bolt", "door lock", "exit door", "housing inspection", "single-arm"],
+  "instruction": "Unlock the door: slide the bolt back 5 centimetres.",
+  "context": "NSPIRE checks that exit doors are unlockable from the inside; a bolt thrown and stiff, or a resident who cannot operate it, blocks egress in an emergency. The verification act is sliding the bolt back until it seats — measurable with a tape measure, and the bolt must still ride its plate (a bolt lifted out of its channel is not an unlocked door).",
+  "setup": "Station scene, fixed layout (see setup.png). On a grey pedestal (14x12x12 cm) at (0.30, -0.10) sits a light-grey backplate (10x16x2.4 cm). On the plate: two dark guide rails (4 mm wide, 15 cm long, 1 cm tall) at x=0.268/0.332 running along y; a bronze keeper stop (5x1.4x1.6 cm) at (0.30, -0.034); and a steel thumb-slide bolt (4x7.5x4 cm, 60 g) resting on the plate thrown to the far end of its travel, centred at (0.30, -0.125). No other loose objects.",
+  "scoring": "task_score reads the bolt's displacement along its travel: pull = y minus the locked position. 0.5 at 2.5 cm; 1.0 at 4.15 cm or more (the nose seats against the keeper). The bolt must still ride its plate: |x-0.30| < 8 mm and above plate height; a bolt knocked off scores 0. success ends the trial when the full pull is at rest; SCORE_OVER=best keeps a pull that later slips.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "The bolt is a free object resting on the plate; with -E object_jitter=0 every trial starts from the exact locked layout in setup.png. Trials use scene=station.",
+  "fidelity": "A real slide bolt rides a keeper channel and a strike bracket; here the bolt rests on a backplate between guide rails with a keeper stop, reproducing the externally visible evidence — a wide knob-end slide that starts thrown and ends seated 4-5 cm back, which is what a photo-and-tape-measure inspection reads. Latch internals, the strike plate and the door itself are not modeled; the slide is scored, not any latch engaging.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0 (80 steps)",
+  "media": ""
+}
