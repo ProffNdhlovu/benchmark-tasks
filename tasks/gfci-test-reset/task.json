@@ -15,7 +15,7 @@
   "scoring": "task_score reads the rocker's signed tilt: an end pressed ~3 mm past level counts as pressed. 0.5 once the TEST end has been pressed down (the trip); 1.0 when the RESET end is then pressed down and held 0.4 s — the full ordered test-and-reset sequence. Order-sensitive state machine: pressing RESET without a prior TEST press scores 0; after a completed sequence the machine re-arms when the rocker returns level. success ends the trial when the sequence completes.",
   "run_limit": "2,400 steps (2 minutes at 20 Hz)",
   "reset_notes": "The rocker is a free object resting on the fulcrum; with -E object_jitter=0 every trial starts from the exact level layout in setup.png. Trials use scene=station.",
-  "fidelity": "Rigid-body fixture built from boxes: the rocker tilts on a smooth fulcrum ridge with no internal latching mechanism. The trip and reset are a tilt-state machine read from the rocker's orientation, standing in for the outlet's internal circuitry — the same externally visible evidence a photo-based inspection reads (a tripped GFCI shows one end down). No electricity is simulated. The scripted demo presses each end ~12 mm deep with a closed parallel jaw; the 3 mm press …",
+  "fidelity": "Rigid-body fixture built from boxes: the rocker tilts on a smooth fulcrum ridge with no internal latching. The trip and reset are a tilt-state machine read from the rocker's orientation, standing in for the outlet's internal circuitry - the same externally visible evidence a photo-based inspection reads (a tripped GFCI shows one end down). No electricity is simulated.",
   "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
   "media": "M-KF6YE7"
 }
