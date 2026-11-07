@@ -10,5 +10,5 @@
   "reset_notes": "The TEST bar is a free object resting on the fulcrum; with -E object_jitter=0 every trial starts from the exact level layout in setup.png. Trials use scene=station.",
   "fidelity": "The alarm's sounder is not simulated: the latched press plus the level return stands in for 'the alarm sounds', stated plainly. The TEST button is modeled as a small rocker on a fulcrum — a free push-button cannot spring back in this simulator, and a gravity-restoring rocker reproduces the same externally visible evidence: the button goes down under a finger and comes back up when released, which is what a photo sequence of a real test reads. The bar's press threshold is a 3 mm end dip.",
   "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
-  "media": ""
+  "media": "M-D72JZT"
 }
