@@ -10,5 +10,5 @@
   "reset_notes": "The tub is a free object; with -E object_jitter=0 every trial starts from the exact layout in setup.png. Trials use scene=station. The knob's rest orientation is axis-aligned; the dwell accumulates in success(), which the embodiment calls once per control step.",
   "fidelity": "Water is not simulated: the open-tap dwell (the vessel held under the spout while the valve is off its seat) stands in for the delivered volume, and the shut-off is the knob's return to a closed orientation. The knob's yaw transfer from the wrist is friction-dependent and slips non-deterministically between runs, which is the intended difficulty: the model must re-grasp and re-turn rather than rely on one blind sweep. The fixture, knob, and vessel are rigid boxes; the tub's spill is scored as a 45-deg tip, not liquid loss.",
   "scores": "Dream-1 run: 0.5; scripted demo: 1.0",
-  "media": ""
+  "media": "M-35QGMB"
 }
