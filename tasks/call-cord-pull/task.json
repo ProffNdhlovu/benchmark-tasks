@@ -10,5 +10,5 @@
   "reset_notes": "The rod is a free object resting on the ridge; with -E object_jitter=0 every trial starts from the exact level layout in setup.png. Trials use scene=station.",
   "fidelity": "The hanging call cord is modeled as a light rigid rod balanced on a pivot ridge: a free object cannot hang from a fixed structure in this simulator, and a rigid rod on a pivot reproduces the same externally visible evidence — the pull end starts level with the bracket and ends 15 cm lower, which is what a photo-and-tape-measure inspection reads. The unit's cord, ceiling anchor and internal latching are simplified; pulling down is scored, not any signal being sent. The 15 cm criterion is D009's 6-inch threshold verbatim.",
   "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
-  "media": ""
+  "media": "M-3YMUXB"
 }
