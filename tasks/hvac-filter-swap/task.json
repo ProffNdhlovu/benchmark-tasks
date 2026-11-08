@@ -1,0 +1,20 @@
+{
+  "title": "Swap a return grille's clogged filter cartridge for a clean one",
+  "category": "Societal relevance",
+  "keywords": [
+    "HVAC",
+    "return grille",
+    "filter swap",
+    "ventilation",
+    "housing inspection"
+  ],
+  "instruction": "Swap the dirty air filter for the clean one and seat it flush.",
+  "context": "A clogged return-air filter chokes ventilation and is the most common HVAC fault found in housing inspections — NSPIRE's ventilation check fails a return whose filter is visibly loaded with dust. The fix is a slide-swap: pull the loaded cartridge out and seat a clean one flush. The whole check is verifiable with a photo and the swap is verifiable with a tape measure (face flush with the frame's mouth), so it translates directly to a real inspection.",
+  "setup": "Station scene, fixed layout (see setup.png). A grey grille frame stands on the table at x=0.36 m: two jambs (1x5.5x6.5 cm each, 7.5 cm apart inside), a sill (9.5x5.5x1 cm) and a back stop (9.5x0.5x6.5 cm) form a square slot 5.5 cm deep, open above, mouth facing -y. The dirty cartridge (5.2x5.2x6 cm, ~80 g, tan) sits in the slot on the sill, its back face flush with the stop. The clean cartridge (same size, white) lies on the table at (0.43 m, -0.14 m). No other loose objects.",
+  "scoring": "task_score: 0.5 when the dirty cartridge rests on the table with its centre at least 2.6 cm beyond the frame's mouth plane (pulled out) within 20 cm of the frame's x; +0.5 when the clean cartridge rests in the slot within 1.2 cm of the seated position on x, y and z (back face flush with the stop). 1.0 for both. Do-nothing scores 0. SCORE_OVER=best: a seated cartridge stays seated and the pulled cartridge stays out.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "With -E object_jitter=0 every trial starts from the exact layout in setup.png. Trials use scene=station.",
+  "fidelity": "The filter is a solid cassette, not a pleated medium: dust loading is represented by colour (tan vs white), stated plainly. The grille is a simplified slot frame rather than a full return housing; the cartridge slides in y and seats on a stop, matching how a real slide-in filter cartridge seats in its frame. Filter pressure drop and airflow are not simulated; the swap is judged by position, which is what a photo reads.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
+  "media": "M-Y4ZV2C"
+}
