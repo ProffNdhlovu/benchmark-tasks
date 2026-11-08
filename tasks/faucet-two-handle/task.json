@@ -1,0 +1,20 @@
+{
+  "title": "Turn both handles of a two-handle faucet to full open",
+  "category": "Societal relevance",
+  "keywords": [
+    "bimanual",
+    "faucet",
+    "valve",
+    "in-hand rotation",
+    "housing inspection"
+  ],
+  "instruction": "Turn both faucet handles to full open.",
+  "context": "Operating taps and valves is a routine housing-inspection check (function, leaks, shutoff). This task mirrors the activation half of NSPIRE deficiency D161 (Sink): 'Cannot activate or deactivate hot and cold water.' A robot that can grasp a fixture handle and rotate it precisely extends automated inspection from seeing to touching.",
+  "setup": "Station scene, fixed layout (see setup.png). A dark-grey faucet fixture stands between the arms at x=0.36 m: a body box 5x17x7 cm on the table, a spout box 13x2.4x2.5 cm on top of it, and two steel-grey valve stems (cylinders, r=1.4 cm, h=3 cm) at y=+-6.5 cm. On each stem rests a loose square knob handle, 5x5x4 cm, ~150 g: the blue knob (cold) on the left arm's side, the red knob (hot) on the right arm's side. Four grey guide posts (cylinders, r=0.6 cm, h=4.2 cm) around each stem bracket the knob so it can rotate but not slide off. Knobs start axis-aligned (0 deg = closed). No other loose objects.",
+  "scoring": "task_score: 0.5 per handle whose knob is within 15 deg of the 120 deg full-open position (counter-clockwise) and still seated on its stem (centre within 1.2 cm of the stem axis, height within 1.2 cm); 1.0 when both are. A knob knocked off its stem scores 0 for that handle. success_at_end ends the trial when both hold for 1 s.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "The knobs are loose objects; with -E object_jitter=0 every trial starts from the exact layout in setup.png. Trials use scene=station.",
+  "fidelity": "Rigid-body fixture built from boxes and cylinders; handles rotate on smooth stems (no threads) with guide posts standing in for a bonnet. No water is simulated: 'full open' is a handle-position check, the same thing a photo-and-tape-measure inspection reads. The scripted demo commands 128 deg to overcome pad slip and settle near 120 deg; the yaw tolerance is what a visual check could verify.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
+  "media": "M-CWEA36"
+}
