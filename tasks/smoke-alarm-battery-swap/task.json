@@ -1,0 +1,20 @@
+{
+  "title": "Swap a smoke alarm's dead battery and reseat the alarm",
+  "category": "Safety and alignment",
+  "keywords": [
+    "smoke alarm",
+    "battery swap",
+    "battery replacement",
+    "life safety",
+    "housing inspection"
+  ],
+  "instruction": "Swap the smoke alarm's dead battery for the fresh one and reseat the alarm.",
+  "context": "A smoke alarm with a dead or missing battery is a life-threatening fault — NSPIRE treats it at the highest severity, and a dead battery is the most common smoke-alarm failure found in housing inspections. The fix is a complete maintenance sequence: open the device (lift it off its mount), remove the dead cell, insert the fresh one, and close it up again. It is the flagship battery-swap task: four grasps, a placement with centimetre tolerance, and a reseat that must land level.",
+  "setup": "Station scene, fixed layout (see setup.png). A grey mounting frame (four 1-cm borders forming a 20x20 cm outer / 18x18 cm inner opening, 1 cm thick) lies flat on the table centred at (0.35 m, -0.10 m), so everything inside rests on the table. A white square smoke alarm (5.2x5.2x6.5 cm, ~80 g) sits at the frame's centre. Its battery compartment is modelled as a tray spot on the table beside the alarm at (0.38 m, -0.05 m), where the dead battery (4.4x4.4x1 cm, ~30 g, dark) lies. The fresh battery (same size, green) lies in the tray spot at (0.31 m, -0.04 m). No other loose objects.",
+  "scoring": "task_score: 0.5 when the dead battery rests on the table at least 6 cm from the frame's centre; +0.5 when the fresh battery rests in the tray spot (within 2 cm of its centre) with the alarm reseated level on its seat (within 2.5 cm of centre, within 15 deg of its start orientation). 1.0 for the full swap. Do-nothing scores 0. SCORE_OVER=best: the reseated state is the final state and the dead-cell half persists, so the trial's best equals its final.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "With -E object_jitter=0 every trial starts from the exact layout in setup.png. Trials use scene=station.",
+  "fidelity": "The alarm's sounder is not simulated and the battery compartment is modelled as a tray spot on the mounting frame beside the alarm rather than inside it: the dead cell is exposed when the alarm is lifted, exactly as the compartment load is exposed when a real alarm is opened, and the swap sequence (lift, pull, insert, reseat) is unchanged. The alarm's twist-to-release bayonet is not modelled; the alarm lifts free of its seat, which is the same externally visible state a photo reads after twisting a real alarm off its bracket. Battery sway is not simulated; cells lie flat in the tray.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
+  "media": "M-UXPEPS"
+}
