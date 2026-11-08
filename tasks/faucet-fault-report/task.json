@@ -1,0 +1,20 @@
+{
+  "title": "Test a two-handle faucet and file the report",
+  "category": "Societal relevance",
+  "keywords": [
+    "bimanual",
+    "faucet",
+    "fault diagnosis",
+    "manipulation",
+    "housing inspection"
+  ],
+  "instruction": "Test the faucet handles and file the report: leave the tag on the pad matching what you find.",
+  "context": "Housing inspections must distinguish a real fixture fault from a fumbled attempt: a tap that will not open and one that will not shut off are different repairs. The two fault conditions are exactly the two halves of NSPIRE deficiency D161 (Sink): 'Cannot activate or deactivate hot and cold water.' This task makes a robot diagnose by manipulation and commit to a filed report, which a photo can verify.",
+  "setup": "Station scene, fixed layout (see setup.png). The faucet fixture between the arms: dark-grey body box 5x17x7 cm with a spout box 13x2.4x2.5 cm, two steel-grey valve stems (cylinders, r=1.4 cm, h=3 cm) at y=+-6.5 cm, a loose square blue knob (cold, 5x5x4 cm, ~150 g) on the left stem and a red knob (hot) on the right stem, four grey guide posts (r=0.6 cm, h=4.2 cm) around each stem. In front of the fixture at x=0.14 m, three flat report pads 7x7.5x1.2 cm: green at y=+8 cm (both handles work), yellow at y=0 (a handle will not open), purple at y=-8 cm (a handle will not shut off). A loose white report tag, 3 cm cube, ~60 g, starts at (0.22, -0.10). Per-trial condition via the FAULT_MODE environment variable: 'ok' (both handles turn freely; no extra objects), 'wont_open' (a dark-grey worn-stop post, r=0.8 cm, h=4.5 cm, stands at the cold knob's counter-clockwise edge and blocks it near closed), 'wont_shut_off' (the cold knob starts at the 120 deg open position and a worn-stop post blocks its clockwise return). The hot handle always works. The condition is not announced to the policy.",
+  "scoring": "task_score from the white tag's final resting spot: 1.0 on the pad matching the fixture's actual condition (tag centre within 2.5 cm of the pad centre), 0.3 on a wrong pad (a report was filed but the diagnosis was wrong), 0.0 if the tag is left anywhere else. success_at_end ends the trial when the tag rests on the correct pad for 1 s.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "With -E object_jitter=0 every trial starts from the exact layout in setup.png for its FAULT_MODE; the knob start pose and worn-stop presence differ by mode as listed in setup. Trials use scene=station.",
+  "fidelity": "Rigid-body fixture from boxes and cylinders; no water is simulated. A fault is a physical worn-stop post that blocks the handle's travel — the same thing an inspector's hand would feel. The report is a tag on a labelled pad, readable from a photo. The three conditions are mutually exclusive and exhaustive; guessing scores 1/3 in expectation, so the report discriminates real diagnosis.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0 (all three modes)",
+  "media": "M-ANEAP9"
+}
