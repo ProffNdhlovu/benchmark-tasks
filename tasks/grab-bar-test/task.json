@@ -1,0 +1,19 @@
+{
+  "title": "Test that a grab bar is secure and file the report",
+  "category": "Societal relevance",
+  "keywords": [
+    "grab bar",
+    "bathroom safety",
+    "diagnosis",
+    "report"
+  ],
+  "instruction": "Grip the grab bar and pull it along its axis to test whether it is secure, then file the report tag on the pad matching what you found.",
+  "context": "A grab bar that pulls out of its mounts fails exactly when a person's weight depends on it; NSPIRE inspectors check every grab bar by gripping and pulling it.",
+  "setup": "A 12 cm long square steel grab bar (16 x 11 mm section, 50 g) rides two guide rails on a low base plate at the table's back. In the secure condition raised end stops capture the bar between the rails; in the loose condition the stops are absent. A white report tag (3 cm cube, 60 g) rests at the table front between a green pad (bar holds) and a yellow pad (bar pulls loose).",
+  "scoring": "1.0 for the tag filed on the pad matching the bar's actual condition (tag centre within 2.5 cm of the pad centre); 0.3 on the wrong pad (a report was filed but the test was misread); 0.0 if the tag is left anywhere else. Do-nothing: 0.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "FAULT_MODE env var seeds the condition: 'secure' (stops present) or 'loose' (stops absent). Nothing is consumed; the bar is free to slide and the tag to be carried.",
+  "fidelity": "The bar's wall mounts are a bench-top rail fixture at grasp height; a loose bar slides out of its rails rather than rotating in a stripped bracket. The bar is square-section (real bars are round) because that is what these 1 N fingertips hold. The scripted 3 cm pull slides a loose bar fully out of its rails while a capped bar does not move.",
+  "scores": "Dream-1 run: 0.0; demo: 1.0 (both conditions)",
+  "media": "M-M8TF3H"
+}
