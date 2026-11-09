@@ -1,0 +1,20 @@
+{
+  "title": "Test a TPR relief valve and file the report",
+  "category": "Societal relevance",
+  "keywords": [
+    "water heater",
+    "TPR valve",
+    "housing inspection",
+    "manipulation",
+    "fault report"
+  ],
+  "instruction": "test the TPR relief valve and file the report",
+  "context": "A water heater's temperature-pressure relief valve is its last defense against a scald or a tank explosion. NSPIRE deficiency D198 (Water Heater) covers a TPR valve that is obstructed, and the inspector's check is to work the test control through its travel. A robot doing a walk-through has to grasp the control, swing it, notice whether it stops short, and commit to a filed finding - manipulation plus a judgment call, not a photo.",
+  "setup": "Station scene, fixed layout (see setup.png). A water-heater body (grey cylinder, r=5.5 cm, h=8 cm) at (0.36, -0.10); a brass TPR valve box (5x5x2 cm) on its top; a steel stem (r=1.4 cm, h=2 cm); an orange square test knob (5x5x4 cm, ~150 g) seated on the stem, its centre at TOP+14 cm; four grey guide posts (r=0.6 cm, h=3 cm) at 45/135/225/315 deg, 4.4 cm out. In front at x=0.14 m, two flat report pads 7x7.5x1.2 cm: green at y=+5 cm (valve operates), yellow at y=-5 cm (control will not swing through). A loose white report tag, 3 cm cube, ~60 g, starts at (0.22, -0.10). Per-trial condition via the FAULT_MODE environment variable: 'ok' (no extra objects) or 'blocked' (a dark corrosion bump, r=0.8 cm, h=6 cm, stands in the knob's swept circle and stops its counter-clockwise travel at about 25 deg). The condition is not announced to the policy.",
+  "scoring": "task_score: 0.5 for the test knob turned at least 15 deg off closed and still seated on its stem; +0.5 for the white tag filed on the pad matching the fixture's actual condition (tag centre within 2.5 cm of the pad centre). 1.0 for the complete check; 0.0 for do-nothing.",
+  "run_limit": "900 steps (45 seconds at 20 Hz)",
+  "reset_notes": "With -E object_jitter=0 every trial starts from the exact layout in setup.png for its FAULT_MODE; only the corrosion bump's presence differs by mode. Trials use scene=station.",
+  "fidelity": "Rigid-body stand-in for the TPR test control: a square knob on a stem in a guide-post ring - the same visible evidence as the lever-and-hinge control (it swings from closed to full travel and stays). No water, pressure or steam is simulated. The fault is a physical corrosion bump that stops the knob's travel - what an inspector's hand would feel. The report is a tag on a labelled pad. Two conditions, mutually exclusive and exhaustive; guessing scores 0.5 in expectation.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0 (both modes)",
+  "media": "M-66X8LH"
+}
