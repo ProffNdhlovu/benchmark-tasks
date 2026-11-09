@@ -1,0 +1,20 @@
+{
+  "title": "Test a toilet flush and file the report",
+  "category": "Societal relevance",
+  "keywords": [
+    "toilet",
+    "flush",
+    "housing inspection",
+    "manipulation",
+    "fault diagnosis"
+  ],
+  "instruction": "test the toilet flush and file the report",
+  "context": "NSPIRE deficiency D181 (Toilet): a component that is damaged, inoperable, or missing such that it may limit the resident's ability to safely discharge human waste - a moderate finding checked on every inspected unit. The flush is the one functional test a toilet gets: press the handle, watch the travel, file the finding. A robot walk-through has to test by manipulation and commit to a filed report, which a photo can verify.",
+  "setup": "Station scene, fixed layout (see setup.png). A toilet bowl (white cylinder, r=6 cm, h=6 cm) at (0.34, -0.08); a tank (white box 16x7x12 cm) behind it at (0.34, 0.035). On the tank's top near its front edge: a steel pivot ridge with the flush lever - a 5x2.4x0.8 cm orange rocker bar (~30 g) between two grey guide walls. In front at x=0.14 m, three flat report pads 7x7.5x1.2 cm: green at y=+8 cm (flush works), yellow at y=0 (lever seized), red at y=-8 cm (handle missing). A loose white report tag, 3 cm cube, ~60 g, starts at (0.22, -0.10). Per-trial condition via the FAULT_MODE environment variable: 'ok', 'stiff' (the lever is a fixed, seized bar), or 'missing' (no lever; only the bare pivot mount). The condition is not announced to the policy.",
+  "scoring": "task_score from the white tag's final resting spot: 1.0 on the pad matching the lever's actual condition (tag centre within 2.5 cm of the pad centre), 0.3 on a wrong pad (a report was filed but the diagnosis was wrong), 0.0 if the tag is left anywhere else.",
+  "run_limit": "900 steps (45 seconds at 20 Hz)",
+  "reset_notes": "With -E object_jitter=0 every trial starts from the exact layout in setup.png for its FAULT_MODE; only the lever's presence and freedom differ by mode. Trials use scene=station.",
+  "fidelity": "Rigid-body fixture from boxes and cylinders; no water, waste or flush cycle is simulated. The externally visible evidence is the lever's travel - what an inspector's hand checks: the handle rocks down past its threshold and springs back (ok), is seized solid when pressed (stiff), or is missing with only the bare mount left. The three conditions are mutually exclusive and exhaustive; a wrong pad scores 0.3, so guessing scores 1/3 in expectation and the report discriminates diagnosis.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0 (all three modes)",
+  "media": "M-9SVWUR"
+}
