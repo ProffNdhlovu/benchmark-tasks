@@ -1,0 +1,20 @@
+{
+  "title": "Clear a flammable box off a space heater",
+  "category": "Societal relevance",
+  "keywords": [
+    "fire safety",
+    "space heater",
+    "housing inspection",
+    "manipulation",
+    "hazard clearance"
+  ],
+  "instruction": "move the flammable box off the space heater to the safe zone",
+  "context": "NSPIRE deficiency D078 (Flammable and Combustible Item) is life-threatening with a 24-hour correction: a flammable or combustible item on or within 3 feet of an appliance that provides heat. The robot has to tell the flammable item from the non-flammable one, lift it off the heater, carry it clear and set it down in a safe area - a hazard clearance a photo alone cannot score.",
+  "setup": "Station scene, fixed layout (see setup.png). A table-top space heater (dark box 9x9x11 cm) with a grey vent grille (6x7 cm) on its front face stands at (0.38, -0.10); a cardboard box (7x7x6 cm, ~80 g) rests on its top. A metal pot (cylinder, r=5 cm, h=9 cm, ~250 g) sits on the table at (0.26, -0.02) - nearby, non-flammable, far too heavy for the gripper. A green safe-zone pad (10x10x0.8 cm) marks the drop-off area at (0.13, 0.06). Single condition; no FAULT_MODE.",
+  "scoring": "task_score: 0.5 for the box at rest and its centre at least 9 cm from the heater's centre (off the appliance); +0.5 for the box at rest with its centre within 3 cm of the safe zone's centre. 1.0 for the complete clearance. Do-nothing: 0 (the box is still on the heater).",
+  "run_limit": "900 steps (45 seconds at 20 Hz)",
+  "reset_notes": "With -E object_jitter=0 every trial starts from the exact layout in setup.png. Single condition - no FAULT_MODE. Trials use scene=station.",
+  "fidelity": "The tabletop rig exercises the ON-appliance half of D078's criterion: the flammable box starts on the heater and must be cleared to a marked safe zone as far from the appliance as the station allows; the 3-foot standoff itself is not scaled. Rigid bodies only - no heat, smoke or ignition is simulated. The discrimination is real: a heavy metal pot beside the heater must be left alone. Numeric scoring from object positions, readable from a photo.",
+  "scores": "Dream-1 run: 0.0; scripted demo: 1.0",
+  "media": "M-XK6KBG"
+}
