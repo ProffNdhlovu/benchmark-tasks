@@ -1,0 +1,20 @@
+{
+  "title": "Test a window sash that won't stay open",
+  "category": "Societal relevance",
+  "keywords": [
+    "single-arm",
+    "window",
+    "sash",
+    "fault-diagnosis",
+    "report-filing"
+  ],
+  "instruction": "Lift the window sash, let it go, and file a report on the matching pad: green if it stays open, yellow if it falls shut.",
+  "context": "NSPIRE D203: a window that will not stay open is a recorded deficiency. Inspectors raise the sash, let go, and judge whether the balance holds - a diagnosis-and-report task, not just a pick-and-place.",
+  "setup": "Fixed layout on the station table (all rigid boxes): window_sash, a light-blue plastic lite 3x3x10 cm, standing centered at (0.26, 0.00); in 'stays' it rests on sill_block, a grey painted-wood block 5x5x8 cm (the lite's bottom edge 8 cm up, its centre at 13 cm), in 'falls' the block is absent and the lite's bottom edge rests on the table; frame_board, a beige painted-wood backdrop 12x2x11 cm standing 19 cm behind the lite; pad_ok, a green marker pad 7x7.5x1.2 cm at (0.14, 0.05); pad_fault, a yellow marker pad 7x7.5x1.2 cm at (0.14, -0.05); report_tag, a white 3 cm cube (60 g) at (0.22, -0.10). Per-trial condition via FAULT_MODE=stays|falls.",
+  "scoring": "The robot moves the white tag onto a pad: 1.0 when it files on the pad matching the sash's actual condition (tag centre within 2.5 cm of the pad centre at the pad-top height), 0.3 when it files on the wrong pad (a report was filed but the test was misread), 0.0 otherwise. Do-nothing scores 0. The score is read from the tag's final resting spot, so no instrumentation beyond a photo of the end state is needed.",
+  "run_limit": "900 steps (45 s at 20 Hz)",
+  "reset_notes": "Per-trial condition is chosen by the FAULT_MODE environment variable before the scene builds, so nothing is consumed or moved between trials; object_jitter=0 keeps the layout exact.",
+  "fidelity": "The lite is a rigid 3x3x10 cm box; the window balance is abstracted as the 8 cm sill block it rests on ('stays') or its absence ('falls'), so 'letting go' drops the lite back onto its support or to the table. Friction, 20 Hz control and a tabletop as the room floor are approximations of a real casement window.",
+  "scores": "Dream-1 run: 0.0 (120 s, 2,400 steps); scripted demo: 1.0 ('stays', the lite settles back onto the block and the tag files on green) and 1.0 ('falls', the lite slides back to the table and the tag files on yellow).",
+  "media": "M-JJRSSD"
+}
