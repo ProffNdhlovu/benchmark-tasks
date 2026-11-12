@@ -1,0 +1,19 @@
+{
+  "title": "Reseat a fallen bulb and re-hook a pull-chain fixture",
+  "category": "Societal relevance",
+  "keywords": [
+    "maintenance",
+    "reassembly",
+    "lighting",
+    "fixture"
+  ],
+  "instruction": "The pull-chain fixture is in pieces: the bulb has fallen out of its socket and the pull rod slipped off its pivot saddle. Reseat the bulb in the socket and lay the rod back across the saddle so the fixture is whole again.",
+  "context": "NSPIRE D125: a permanently installed light fixture that is inoperable is deficient. The technician's fix is physical reassembly - reseat the bulb, re-hook the chain - and the pass check is the same one a technician makes by eye: are the parts back in place?",
+  "setup": "All parts are rigid cylinders/boxes on a flat table (the station scene). A fixture post 2.8 cm diameter x 4 cm tall, grey, at (38, -11) cm, carries a socket cylinder 2.4 cm diameter x 3 cm sitting on its top. A light-bulb block 2.8x2.8x4 cm, 50 g, warm white (a square-bodied stand-in: the sim's flat finger pads cannot hold a cylinder), lies fallen on the table at (36, -2) cm. Beside the post, a pivot saddle 6x4x1 cm, dark grey, at (28, -11) cm; the pull rod 8x2x2 cm, 40 g, grey, lies on the table at (28, 1) cm.",
+  "scoring": "0.5 when the bulb rests centred on the socket (its centre within 5 mm of the socket-top seat in x, y and z, at rest); 0.5 when the pull rod rests level across the saddle (centre within 2 cm in x and y and 5 mm in z of the saddle-top seat, tilt under 7 degrees, at rest); 1.0 for both. Positions are scored at the end of the episode: a part knocked off afterwards loses its credit. Do-nothing: 0.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "Both parts start fallen on the table in a fixed layout; nothing is consumed.",
+  "fidelity": "A rigid-body stand-in at fixture scale. The bulb seats by resting centred on the socket (a real twist-lock engages threads); the rod by resting level on the saddle (a real chain hooks over a pivot). The electrical function is not simulated - success is the physical reassembly a technician verifies visually, and the scorer checks exactly that geometry.",
+  "scores": "PENDING VERIFICATION",
+  "media": "M-MH2PNW"
+}
