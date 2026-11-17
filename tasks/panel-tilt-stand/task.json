@@ -1,0 +1,20 @@
+{
+  "title": "Roll a stored solar panel up onto its mounting stand",
+  "category": "Societal relevance",
+  "keywords": [
+    "solar",
+    "maintenance",
+    "tilt",
+    "panel",
+    "energy"
+  ],
+  "instruction": "Tilt the solar panel up onto its stand.",
+  "context": "Off-grid crews store panels flat on their mounting frames between seasons and re-angle them for the season - the tilt is the difference between a panel that charges and one that barely does. Adjusting a propped panel without carrying it off is the everyday version of this job.",
+  "setup": "All rigid boxes on the station table (scene 'station', table top at 75 cm). A panel 9.8x18x1.5 cm, 120 g, dark blue-grey, lies flat with its centre at (27, -19) cm, rest + 8 cm: its far end (y -28 cm) on a storage post 2x3x8 cm, grey, centred (27, -29.5) cm, and its near end (y -10 cm) on the stand's crossbar 16x3x1.5 cm, grey, centred (27, -10.5) cm, rest + 8 cm, carried by two legs 2x3x6.5 cm at x 19/35 cm. A 1.5 mm toe lip 3.6x1.5 cm, grey, lies on the table with its face at y -26.25 cm, marking the seat ~1.3 cm behind the leaned panel's landing spot.",
+  "scoring": "Scored at the episode end with the panel at rest (speeds under 1 cm/s and 0.5 rad/s): 1.0 when the panel leans back on the crossbar at 25-35 degrees from horizontal, its bottom edge within 3 cm of the toe rail's face (y -26.25 cm), its face normal tilted toward the stand (the far edge up) and its yaw within 15 degrees of square; 0.5 for a 35-42 degree lean (overshot the seat); 0.0 flat, overturned, fallen, facing away, or propped anywhere else. Do-nothing: 0.",
+  "run_limit": "400 steps (20 seconds at 20 Hz)",
+  "reset_notes": "Nothing is consumed; the panel spawns in one fixed layout on the post and crossbar.",
+  "fidelity": "A rigid-body stand-in at bench scale. The roll-up is a real pivot about the crossbar's front edge inside a parallel-jaw pinch (the pad faces stay parallel to the panel's faces through the rotation); the seat is the geometric wedge a technician sets by eye. Panel electrical function is not simulated - the tilt and seat are exactly what a protractor and tape measure check.",
+  "scores": "Dream-1 run: 0.0 (2400 steps, active throughout, never landed the tilt); scripted demo: 1.0",
+  "media": "M-FNDS54"
+}
