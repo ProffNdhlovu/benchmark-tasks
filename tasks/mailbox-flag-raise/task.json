@@ -1,0 +1,19 @@
+{
+  "title": "Raise a fallen mailbox flag",
+  "category": "Societal relatability",
+  "keywords": [
+    "mailbox",
+    "flag",
+    "seesaw",
+    "single-arm"
+  ],
+  "instruction": "The mailbox flag is lying flat in the channel on the box's top - raise it up so it stands against the stop rail.",
+  "context": "A raised mailbox flag is the universal outgoing-mail signal on rural routes; a flag left down means the mail waits another day. Raising one is a small everyday interaction a home-assistant robot performs, with a clean physical end state a passer-by can verify at a glance.",
+  "setup": "Station table. A fixed light-grey metal mailbox box, 9 x 20 x 12 cm, standing at 31 cm +x and 2 cm -y from the table centre, its top 12 cm above the table. A fixed grey-metal stop rail, 9 x 1 x 1.5 cm, hangs 5 mm above the box top near the box's far edge, carried on two fixed grey-metal legs, 1 x 1 x 4 cm each, at x 27.5 and 34.5 cm. A fixed grey-metal stop post, 5 x 1 x 8.5 cm, stands behind the rail. A red rigid mail-flag paddle, 5 x 4 x 2 cm, 40 g, lies flat in the channel on the box top with its far edge just under the rail. This fixed starting layout matches the setup screenshot.",
+  "scoring": "1.0 when the flag stands raised: tilted 80-130 deg from flat, its face near-vertical (either lean direction), square to the mailbox (yaw within 15 deg), still on the box (bottom on the box top, far face within 2 cm of the rail), and at rest. 0.5 for a 45-80 deg tilt that did not stand. 0.0 flat, tilted under 45 deg, flopped past 130 deg, knocked off the box, or carried away. Measurable with a protractor on a photo.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "Nothing is consumed. Reset re-spawns the flag lying flat in the channel; the mailbox, rail, legs and stop post are fixed.",
+  "fidelity": "The real flag pivots on a bolt at the box's side; the sim's flag is a rigid paddle lying in a channel on the box top that seesaws up over a fixed stop rail and stands upright against the rail's far face at 90 deg - the same seesaw-about-a-rail mechanism as propping a panel onto its stand. The bolt, door and mailbox interior are not modelled.",
+  "scores": "Dream-1 run: 0.0 (hit the 2,400-step limit); scripted demo: 1.0",
+  "media": "M-ZNP7NG"
+}
