@@ -1,0 +1,22 @@
+{
+  "title": "Fit an adjustable cane to the height marked on the bench",
+  "category": "Societal relevance",
+  "keywords": [
+    "cane",
+    "mobility aid",
+    "height fitting",
+    "telescoping",
+    "spring button",
+    "durable medical equipment",
+    "bimanual"
+  ],
+  "instruction": "Fit the client's cane on the bench: pull the lower shaft out until it stops with the rubber foot on the red line, shove it in once and work it back out to the stop, then let go.",
+  "context": "Setting a cane to its user's height is the first step of every cane fitting: the handle should end up level with the user's wrist crease, the check occupational therapists and the CDC's STEADI falls programme teach, and suppliers mark the measured height on the bench ruler before adjusting the cane. About 1 in 4 US adults aged 65+ falls each year (CDC WISQARS), falls are the leading cause of injury death in that group, and a cane set even one 2.5 cm hole off the mark changes gait and load; the marked 80.0 cm fits a user of about 175-180 cm. Durable-medical-equipment suppliers, pharmacy and home-health staff fit and check these daily: the fitter pulls the shaft out to the mark, confirms the button has seated, and checks the shaft before handing the cane over.",
+  "setup": "Station scene, fixed layout (see setup.png). Positions are cm from the midpoint between the arm bases, x forward, y to the robot's left, heights above the table top. An adjustable square-tube aluminium cane lies on its side on two fixed wooden cradle rails, running diagonally (30 deg off the y axis) from a handle end near the table's front left to its foot end in front of the left arm: the upper shaft is 55 cm of 2.8 cm square brushed-aluminium tube with a 11 x 3.2 x 2.6 cm straight black handle bar across its end, closed on the far side and on top and bottom, with its button-side wall carrying a 1.4 cm wide, 1.2 cm tall window at every hole; the lower shaft is 34 cm of 2.4 cm square tube sliding inside it, with a black spring button 1.4 x 1.2 x 1.2 cm proud of its button-side face 6 cm below its root and a black rubber foot 3.2 x 3.5 x 2.8 cm on its end. The button holes are every 2.5 cm of extension, 2.5 to 27.5 cm; the cane starts in its third hole (7.5 cm out, the foot 62 cm from the handle's end), and the shaft's travel ends at 25.0 cm, where the button seats in the marked hole. The cradle is two fixed plywood rails 2 x 58.5 x 1.9 cm, 3.8 cm apart, just under the cane so its sides clear the rails. A fixed steel ruler 5 x 85 x 0.6 cm lies level with the cane 4.5 cm out on its button side, marked with a tick every 5 cm from the handle's end (0 to 80) and one red line across it at 80.0 cm, the client's fitted height. No other loose objects.",
+  "scoring": "Measured at the end; 0 if nothing was done (the cane starts 17.5 cm short of the stop). 0.5 for the fit: the lower shaft left at its end of travel (extension 25.0 cm, within 4 mm), where the button's shoulder seats against the hole's edge and the rubber foot sits on the red line - the shaft can sit anywhere along its travel and stays where it is left, so any position short of the stop (one hole short is 22.5 cm) or past it scores 0. 0.3 for the hold test: after the fit was first reached, the shaft was shoved at least 6 mm in from the stop at some step and is back within 4 mm of the stop at the end. 0.2 for the clean let-go: at the end no gripper's palm or fingers touch the cane's upper or lower shaft (checked against the gripper's own shape) and the shaft is still (joint speed under 1 cm/s). SCORE_OVER=end.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "With -E object_jitter=0 every trial starts from the exact layout in setup.png; the cane, cradle and ruler are fixed and nothing is consumed. The lower shaft resets to its third hole.",
+  "fidelity": "The button's detent is the shaft's end of travel: the joint's upper limit sits at the marked hole, so pulled out the shaft seats its button's shoulder against the hole's edge and can go no further, staying wherever left - the spring plunger is not simulated. Holes are windows in the upper shaft with the button visible; the handle is a straight bar; ruler numerals are not rendered (ticks plus the red line carry the reading). Pull to the stop, shove, work back out, let go is the real procedure.",
+  "scores": "Dream-1 run: 0 (hit the 2,400-step limit); scripted demo: 1.0",
+  "media": "M-GEQJPY"
+}
